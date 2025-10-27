@@ -7,19 +7,21 @@
 				"ms-dotnettools.csdevkit",
 				"jmrog.vscode-nuget-package-manager",
 				"ms-azuretools.vscode-docker",
-				"EditorConfig.EditorConfig"
+				"EditorConfig.EditorConfig",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
 			]
 		}
 	},
 	"mounts": [
 		// mount users ssh keys for git ssh
-		"source=/mnt/c/Users/z003zr2j/.ssh,target=/home/vscode/.ssh-copy,type=bind,consistency=cached"
+		// "source=/mnt/c/Users/z003zr2j/.ssh,target=/home/vscode/.ssh-copy,type=bind,consistency=cached"
 	],
 	"runArgs": [
-		"--network=host"
+		// "--network=host"
 	],
 	"postCreateCommand": {
-		"moveSsh": "mkdir -p /home/vscode/.ssh; cp /home/vscode/.ssh-copy/* /home/vscode/.ssh/; chmod 600 /home/vscode/.ssh/*",
+		// "moveSsh": "mkdir -p /home/vscode/.ssh; cp /home/vscode/.ssh-copy/* /home/vscode/.ssh/; chmod 600 /home/vscode/.ssh/*",
 		"gitConfig": "git config --global core.filemode false"
 	}
 }
